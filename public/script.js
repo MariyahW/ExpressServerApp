@@ -10,6 +10,52 @@ prime.addEventListener("change", (event) => {
   event.preventDefault();
   console.log(event);
   if (event.target.value == "base") {
+    let greater = document.createElement("option");
+    greater.value = "greater";
+    greater.innerHTML = "Search all salaries larger than your input";
+
+    let dis = document.createElement("option");
+    dis.value = "dis";
+    dis.innerHTML = " ";
+
+    let def = document.createElement("option");
+    def.value = "default";
+    def.innerHTML = "Default";
+
+
+    let label = document.createElement("label");
+    label.for = "second";
+    label.innerHTML = "What  base pay details would you like to search?";
+    let sec = document.createElement("select");
+    sec.id = "second";
+
+    //add to form
+    sec.appendChild(def);
+    sec.appendChild(greater);
+    sec.appendChild(dis);
+    sec.value = "dis";
+    form.appendChild(label);
+    form.appendChild(sec);
+
+        sec.addEventListener('change', event=>{
+            if(event.target.value=='greater'){
+                let amount = document.createElement('input');
+                amount.type='text';
+                amount.placeholder='Enter the salary min'
+                form.appendChild(space);
+                form.appendChild(amount);
+                amount.addEventListener('change', event=>{
+                    console.log(event.target)
+                window.open(`http://localhost:8080/base/${event.target.value}`, "newwindow");
+        
+                })
+        
+
+            }
+            if(event.target.value=='default')  window.open("http://localhost:8080/base", "newwindow");
+        })
+
+
   }
   if (event.target.value == "pay") {
     //Create elements upon selection pay
@@ -47,6 +93,7 @@ prime.addEventListener("change", (event) => {
     sec.value = "dis";
     form.appendChild(label);
     form.appendChild(sec);
+
     sec.addEventListener("change", (event) => {
       if (event.target.value == "default") {
         window.open("http://localhost:8080/pay", "newwindow");
@@ -93,6 +140,17 @@ prime.addEventListener("change", (event) => {
         window.open("http://localhost:8080/pay?salary=yes", "newwindow");
       }
       if (event.target.value == "department") {
+        let dept = document.createElement('input');
+        dept.type='text';
+        dept.placeholder='Enter Dept Abbreviation'
+        form.appendChild(space);
+        form.appendChild(dept);
+        dept.addEventListener('change', event=>{
+            console.log(event.target)
+        window.open(`http://localhost:8080/pay/${event.target.value}`, "newwindow");
+
+        })
+
       }
     });
   }
