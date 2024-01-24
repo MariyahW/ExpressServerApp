@@ -191,7 +191,7 @@ prime.addEventListener("change", (event) => {
         form.appendChild(emp);
 
         emp.addEventListener("change", (event) => {
-          window.open(`http://localhost:8080/department/${event.target.value}`);
+          window.open(`http://localhost:8080/department/?employee=${event.target.value}`);
         });
       }
     });
