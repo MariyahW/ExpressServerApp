@@ -26,11 +26,10 @@
 - [How it works](#working)
 - [Usage](#usage)
 - [Getting Started](#getting_started)
-- [Deploying your own server](#deployment)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+
 
 ## 🧐 About <a name = "about"></a>
 
@@ -44,13 +43,7 @@ Responsive Design: Access the application seamlessly on various devices, includi
 
 ## 💭 How it works <a name = "working"></a>
 
-The bot first extracts the word from the comment and then fetches word definitions, part of speech, example and source from the Oxford Dictionary API.
-
-If the word does not exist in the Oxford Dictionary, the Oxford API then returns a 404 response upon which the bot then tries to fetch results form the Urban Dictionary API.
-
-The bot uses the Pushshift API to fetch comments, PRAW module to reply to comments and Heroku as a server.
-
-The entire bot is written in Python 3.6
+The page ...
 
 ## 🎈 Usage <a name = "usage"></a>
 
@@ -77,6 +70,7 @@ npm init
 npm install
 npm i express
 npm i nodemon
+npm i ejs
 
 
 ### Start the application
@@ -84,11 +78,6 @@ npm run start
 
 Visit http://localhost:8080 in your web browser to access the application
 
-## 🚀 Deploying your own bot <a name = "deployment"></a>
-
-To see an example project on how to deploy your bot, please see my own configuration:
-
-- **Heroku**: https://github.com/kylelobo/Reddit-Bot#deploying_the_bot
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -97,6 +86,7 @@ To see an example project on how to deploy your bot, please see my own configura
 - [HTML](https://html.com/) - HTML
 - [NODE](https://nodejs.org/en) - Node JS
 - [EXP](https://expressjs.com/) - Express
+- [EJS](https://ejs.co/) -EJS
 
 
 ## ✍️ Authors <a name = "authors"></a>
@@ -105,8 +95,3 @@ To see an example project on how to deploy your bot, please see my own configura
 
 
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
