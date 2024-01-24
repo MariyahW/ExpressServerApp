@@ -10,16 +10,27 @@ const base = require('../data/base');
 // todo: Runs fine but get error Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client in console -- No header is being changed
 Router.route('/')
 .get((req,res)=>{
-    const gender = JSON.stringify(req.query['gender']).toLocaleUpperCase();
-    console.log(gender);
+    let gender = JSON.stringify(req.query['gender']);
+    let salary = JSON.stringify(req.query['salary']);
+    console.log(salary);
     const arr= [];
     if(gender){
+        gender=gender.toLocaleUpperCase();
             pay.forEach(salary=>{
                       if(JSON.stringify(salary[11])==gender){
                     arr.push(salary);
                 }
             })
             res.json(arr);
+        }
+        if(salary){
+            pay.forEach(salary=>{
+              
+              arr.push(salary[12]);
+            //   arr.sort((a,b)=>(a-b)); This line works but has been commented out for speed of loading
+          
+      })
+      res.json(arr);
         }
         
     
