@@ -8,7 +8,7 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[GitHub Issues](https://github.com/MariyahW/ExpressServerApp/issues)
+[GitHub Issues][:warning:](https://github.com/MariyahW/ExpressServerApp/issues)
 [GitHub Pull Requests](https://github.com/MariyahW/ExpressServerApp/pulls)
 
 
@@ -23,7 +23,6 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Demo / Working](#demo)
 - [How it works](#working)
 - [Usage](#usage)
 - [Getting Started](#getting_started)
@@ -35,11 +34,13 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your bot.
+Salary Data Display: View detailed information about the salaries of workers in Montgomery County.
+Search and Filter: Easily search and filter salary data based on different criteria such as department or salary range.
+User-Friendly Interface: A clean and intuitive interface designed for easy navigation and a pleasant user experience.
+Data Accuracy: The application pulls data from reliable sources to ensure accuracy and reliability.
+Responsive Design: Access the application seamlessly on various devices, including desktops, tablets, and mobile phones.
 
-## 🎥 Demo / Working <a name = "demo"></a>
 
-![Working](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 
 ## 💭 How it works <a name = "working"></a>
 
@@ -53,68 +54,35 @@ The entire bot is written in Python 3.6
 
 ## 🎈 Usage <a name = "usage"></a>
 
-To use the bot, type:
+Installation: Follow the installation instructions in the Getting Started section to set up the application on your local machine.
 
-```
-!dict word
-```
+Usage: Launch the application and start exploring Montgomery County workers' salaries. Use the search and filter options to customize your view.
 
-The first part, i.e. "!dict" **is not** case sensitive.
-
-The bot will then give you the Oxford Dictionary (or Urban Dictionary; if the word does not exist in the Oxford Dictionary) definition of the word as a comment reply.
-
-### Example:
-
-> !dict what is love
-
-**Definition:**
-
-Baby, dont hurt me~
-Dont hurt me~ no more.
-
-**Example:**
-
-Dude1: Bruh, what is love?
-Dude2: Baby, dont hurt me, dont hurt me- no more!
-Dude1: dafuq?
-
-**Source:** https://www.urbandictionary.com/define.php?term=what%20is%20love
+Feedback: We welcome feedback! If you have suggestions, find issues, or want to contribute.
 
 ---
 
-<sup>Beep boop. I am a bot. If there are any issues, contact my [Master](https://www.reddit.com/message/compose/?to=PositivePlayer1&subject=/u/Wordbook_Bot)</sup>
 
-<sup>Want to make a similar reddit bot? Check out: [GitHub](https://github.com/kylelobo/Reddit-Bot)</sup>
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+### Clone the repository
+git clone https://github.com/MariyahW/ExpressServerApp
 
-### Prerequisites
+### Navigate to the project directory
+cd ExpressServerApp
 
-What things you need to install the software and how to install them.
+### Install dependencies
+npm init
+npm install
+npm i express
+npm i nodemon
 
-```
-Give examples
-```
 
-### Installing
+### Start the application
+npm run start
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+Visit http://localhost:8080 in your web browser to access the application
 
 ## 🚀 Deploying your own bot <a name = "deployment"></a>
 
@@ -124,8 +92,12 @@ To see an example project on how to deploy your bot, please see my own configura
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [PRAW](https://praw.readthedocs.io/en/latest/) - Python Reddit API Wrapper
-- [Heroku](https://www.heroku.com/) - SaaS hosting platform
+- [JS](https://javascript.com) - Javascript
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - CSS
+- [HTML](https://html.com/) - HTML
+- [NODE](https://nodejs.org/en) - Node JS
+- [EXP](https://expressjs.com/) - Express
+
 
 ## ✍️ Authors <a name = "authors"></a>
 
