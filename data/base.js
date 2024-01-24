@@ -12,7 +12,10 @@ const base = {
       "non_null" : "10052",
       "largest" : "275000.00",
       "null" : "0",
-      "top" : [ {
+      "top" : [{
+        "item" : "275000.00",
+        "count" : "unknown"
+      }, {
         "item" : "100900.00",
         "count" : "388"
       }, {
@@ -72,6 +75,9 @@ const base = {
       }, {
         "item" : "148607.00",
         "count" : "71"
+      }, {
+        "item" : "11147.24",
+        "count" : "unknown"
       } ],
       "smallest" : "11147.24",
       "count" : "10052",

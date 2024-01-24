@@ -10057,3 +10057,5 @@ const pay =  [ [ "row-iz8k~vr26-4up4", "00000000-0000-0000-A337-AD7C0BE906BC", 0
 , [ "row-jhb5.w4ga_m93a", "00000000-0000-0000-DAC4-5C351BA6D6CD", 0, 1676045600, null, 1676045600, null, "{ }", "ABS", "Alcohol Beverage Services", "ABS 85 Administration", "M", "136017.23", null, null, "M3" ]
 , [ "row-e9hd_9xj7~anpc", "00000000-0000-0000-F571-FF6C0B91D5AB", 0, 1676045600, null, 1676045600, null, "{ }", "ABS", "Alcohol Beverage Services", "ABS 85 Administration", "M", "171540.00", null, null, "M2" ]
  ]
+
+ module.exports=pay;
