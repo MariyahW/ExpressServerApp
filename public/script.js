@@ -1,9 +1,6 @@
 const form = document.querySelector("form");
 const prime = document.getElementById("prime");
-const space = document.createElement('br');
-// const sec = document.getElementById('second');
-// const third = document.getElementById('third');
-
+const space = document.createElement("br");
 
 //event listener for form that will allow me to dynamically add selections based on user input. The form selections will ultimately send the user to the api page
 prime.addEventListener("change", (event) => {
@@ -22,7 +19,6 @@ prime.addEventListener("change", (event) => {
     def.value = "default";
     def.innerHTML = "Default";
 
-
     let label = document.createElement("label");
     label.for = "second";
     label.innerHTML = "What  base pay details would you like to search?";
@@ -37,25 +33,24 @@ prime.addEventListener("change", (event) => {
     form.appendChild(label);
     form.appendChild(sec);
 
-        sec.addEventListener('change', event=>{
-            if(event.target.value=='greater'){
-                let amount = document.createElement('input');
-                amount.type='text';
-                amount.placeholder='Enter the salary min'
-                form.appendChild(space);
-                form.appendChild(amount);
-                amount.addEventListener('change', event=>{
-                    console.log(event.target)
-                window.open(`http://localhost:8080/base/${event.target.value}`, "newwindow");
-        
-                })
-        
-
-            }
-            if(event.target.value=='default')  window.open("http://localhost:8080/base", "newwindow");
-        })
-
-
+    sec.addEventListener("change", (event) => {
+      if (event.target.value == "greater") {
+        let amount = document.createElement("input");
+        amount.type = "text";
+        amount.placeholder = "Enter the salary min";
+        form.appendChild(space);
+        form.appendChild(amount);
+        amount.addEventListener("change", (event) => {
+          console.log(event.target);
+          window.open(
+            `http://localhost:8080/base/${event.target.value}`,
+            "newwindow"
+          );
+        });
+      }
+      if (event.target.value == "default")
+        window.open("http://localhost:8080/base", "newwindow");
+    });
   }
   if (event.target.value == "pay") {
     //Create elements upon selection pay
@@ -120,10 +115,9 @@ prime.addEventListener("change", (event) => {
         third.appendChild(male);
         third.appendChild(female);
         third.appendChild(dis);
-        third.value=dis;
-       
-   
-       form.appendChild(space);
+        third.value = dis;
+
+        form.appendChild(space);
         form.appendChild(label);
         form.appendChild(third);
 
@@ -140,20 +134,66 @@ prime.addEventListener("change", (event) => {
         window.open("http://localhost:8080/pay?salary=yes", "newwindow");
       }
       if (event.target.value == "department") {
-        let dept = document.createElement('input');
-        dept.type='text';
-        dept.placeholder='Enter Dept Abbreviation'
+        let dept = document.createElement("input");
+        dept.type = "text";
+        dept.placeholder = "Enter Dept Abbreviation";
         form.appendChild(space);
         form.appendChild(dept);
-        dept.addEventListener('change', event=>{
-            console.log(event.target)
-        window.open(`http://localhost:8080/pay/${event.target.value}`, "newwindow");
-
-        })
-
+        dept.addEventListener("change", (event) => {
+          console.log(event.target);
+          window.open(
+            `http://localhost:8080/pay/${event.target.value}`,
+            "newwindow"
+          );
+        });
       }
     });
   }
   if (event.target.value == "department") {
+    let greater = document.createElement("option");
+    greater.value = "greater";
+    greater.innerHTML =
+      "Search all department with more employees than your input";
+
+    let dis = document.createElement("option");
+    dis.value = "dis";
+    dis.innerHTML = " ";
+
+    let def = document.createElement("option");
+    def.value = "default";
+    def.innerHTML = "Default";
+
+    let label = document.createElement("label");
+    label.for = "second";
+    label.innerHTML = "What  department details would you like to search?";
+    let sec = document.createElement("select");
+    sec.id = "second";
+
+    //add to form
+    sec.appendChild(def);
+    sec.appendChild(greater);
+    sec.appendChild(dis);
+    sec.value = "dis";
+    form.appendChild(label);
+    form.appendChild(sec);
+
+    sec.addEventListener("change", (event) => {
+      console.log(event.target.value);
+      if (event.target.value == "default") {
+        window.open("http://localhost:8080/department", "newwindow");
+      }
+      if (event.target.value == "greater") {
+        let emp = document.createElement("input");
+        emp.type = "text";
+        emp.placeholder = "Min Employee";
+
+        form.appendChild(space);
+        form.appendChild(emp);
+
+        emp.addEventListener("change", (event) => {
+          window.open(`http://localhost:8080/department/${event.target.value}`);
+        });
+      }
+    });
   }
 });
