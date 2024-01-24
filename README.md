@@ -8,7 +8,7 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[GitHub Issues](:warning:)(https://github.com/MariyahW/ExpressServerApp/issues)
+[![GitHub Issues](:warning:)(https://github.com/MariyahW/ExpressServerApp/issues)]
 [GitHub Pull Requests](https://github.com/MariyahW/ExpressServerApp/pulls)
 
 
