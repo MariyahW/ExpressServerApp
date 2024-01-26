@@ -35,30 +35,31 @@ Router.route("/")
   .delete((req, res) => {
     if (req.body.name || req.body.item) {
       for (let index = 0; index < data.length; index++) {
-        if (req.body.name == dept.name || req.body.item == dept.item) {
+        if (data[index].name==(req.body.name) >=0 || req.body.item == data[index].item) {
           data.splice(index, 1);
           res.json(data);
         }
       }
     }
-  })
-  //Patch
-  Router.route("/:dept")
-  .patch((req, res) => {
-    const dept = req.params.dept;
-    dept = JSON.stringify(dept);
+  }).patch((req, res) => {
+   
+    if (req.body.name || req.body.item){
 
     if (data.findIndex((d) => d.item) >= 0) {
-      data.forEach((dep) => {
-        if (dep.item == dept) {
-          dep.item = req.body.item;
-          dep.name = req.body.name;
-          dep.count = req.body.count || null;
+      console.log(data.findIndex(d=>d.item));
+      for (let index = 0; index < data.length; index++) {
+        if (data[index].name==(req.body.name) >=0 || req.body.item == data[index].item) {
+          data[index].item = req.body.item;
+          data[index].name = req.body.name;
+          data[index].count = req.body.count || null;
         }
-      });
+      }
     }
+  }
     res.json(data);
   });
+ 
+  
 
 
 
